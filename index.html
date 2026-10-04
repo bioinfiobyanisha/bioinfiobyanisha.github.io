@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Anisha Vishwakarma — Bioinformatics &amp; Computational Genomics</title>
+<meta name="description" content="Bioinformatics researcher across genomics, transcriptomics and proteomics."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05070D;--ink:#EAF0FA;--soft:#8C9AB4;--A:#2EE6D0;--T:#FF7A59;--G:#6C96FF;--C:#F5C04A;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+#glow{position:fixed;left:0;top:0;width:480px;height:480px;margin:-240px 0 0 -240px;z-index:0;pointer-events:none;background:radial-gradient(circle,rgba(46,230,208,.13),transparent 65%)}
+a{color:inherit}.mono{font-family:'JetBrains Mono',monospace}
+main{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 28px}
+.col{max-width:600px}
+section{padding:96px 0 10px}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:40px}
+.tag{font:13px 'JetBrains Mono',monospace;color:var(--A)}
+h1{font:700 clamp(34px,6.4vw,76px)/1.02 Unbounded,sans-serif;margin:16px 0 20px;letter-spacing:-.03em;white-space:pre-line}
+.role{font-size:18px;color:#BFCBE0;margin:0 0 24px}.role b{color:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{font:13px 'JetBrains Mono',monospace;text-decoration:none;padding:10px 16px;border:1px solid var(--line);border-radius:999px;transition:.15s}
+.btn:hover,.btn:focus-visible{border-color:var(--A);box-shadow:0 0 24px rgba(46,230,208,.35);outline:none}
+.btn.p{background:var(--A);border-color:var(--A);color:#03201c;font-weight:500}
+.hint{margin-top:34px;font:12px 'JetBrains Mono',monospace;color:var(--soft)}
+h2{font:700 clamp(24px,3.4vw,34px) Unbounded,sans-serif;margin:0 0 26px;letter-spacing:-.02em}
+p.l{color:#C6D1E4;margin:0 0 14px}
+.job{border-left:2px solid var(--c);padding:2px 0 2px 20px;margin-bottom:30px}
+.job .w{font:12px 'JetBrains Mono',monospace;color:var(--soft)}
+.job h3{margin:2px 0 0;font-size:19px}.job .o{color:var(--soft);font-size:14.5px}
+.job .pi{font:12.5px 'JetBrains Mono',monospace;color:var(--c);margin:4px 0 8px}
+.job ul{margin:0;padding-left:18px;color:#C6D1E4;font-size:15px}.job li{margin-bottom:3px}
+.sk{display:grid;grid-template-columns:150px 1fr;gap:6px 18px;padding:12px 0;border-top:1px solid var(--line)}
+.sk b{font:500 12.5px 'JetBrains Mono',monospace;color:var(--c)}.sk span{color:#C6D1E4;font-size:15px}
+.pr{padding:16px 0;border-top:1px solid var(--line);transition:padding .2s}
+.pr:hover{padding-left:12px}.pr h3{margin:0 0 4px;font-size:17px}
+.pr p{margin:0 0 6px;color:#C6D1E4;font-size:14.5px}.pr small{font:12px 'JetBrains Mono',monospace;color:var(--c)}
+.ed div{padding:12px 0;border-top:1px solid var(--line)}.ed b{display:block;font-size:15.5px}.ed small{font:12px 'JetBrains Mono',monospace;color:var(--soft)}
+.mail{display:inline-block;font:700 clamp(18px,3vw,26px) Unbounded,sans-serif;text-decoration:none;border-bottom:2px solid var(--A);margin:6px 0 20px;word-break:break-all}
+footer{position:relative;z-index:1;padding:60px 28px 40px;color:var(--soft);font:12px 'JetBrains Mono',monospace}
+#hud{position:fixed;right:22px;bottom:22px;z-index:5;display:flex;gap:8px;align-items:center;font:12px 'JetBrains Mono',monospace;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(5,7,13,.7);backdrop-filter:blur(10px)}
+#hud span{color:var(--soft);transition:.3s}#hud span.on{color:var(--c);text-shadow:0 0 14px var(--c)}
+#photo{width:112px;height:112px;border-radius:50%;object-fit:cover;border:2px solid var(--A);box-shadow:0 0 36px rgba(46,230,208,.4);margin-bottom:18px}
+@media(max-width:800px){#bg{opacity:.5}.col{background:rgba(5,7,13,.6);padding:14px;border-radius:14px}.sk{grid-template-columns:1fr}#hud{left:50%;right:auto;transform:translateX(-50%);bottom:12px}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas><div id="glow" aria-hidden="true"></div>
+<div id="hud" aria-hidden="true"><span style="--c:#2EE6D0">DNA</span>›<span style="--c:#FF7A59">RNA</span>›<span style="--c:#6C96FF">Protein</span></div>
+<main>
+<section class="hero col" id="top">
+  <img id="photo" src="photo.jpg" alt="Anisha Vishwakarma" onerror="this.remove()"/>
+  <div class="tag">&gt;anisha_vishwakarma | bioinformatics_researcher</div>
+  <h1 id="nm" data-t="Anisha&#10;Vishwakarma">Anisha&#10;Vishwakarma</h1>
+  <p class="role"><b>Bioinformatics</b> across genomes, transcriptomes and proteomes. Project Associate-I at THSTI, Faridabad. Open to relocate (Delhi NCR).</p>
+  <div class="links">
+    <a class="btn p" href="mailto:anishabioinformatics@gmail.com">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/anisha-v-bioinfo" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/bioinfiobyanisha" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="hint">scroll to follow the central dogma · move the cursor to disturb it · click to pulse</div>
+</section>
+
+<section class="col" id="about"><h2>About</h2>
+<p class="l">M.Sc. Biotechnology graduate working across genomics, transcriptomics and proteomics. At BRIC–THSTI, Faridabad, I build an in-silico platform for high-throughput omics data of human, plant and pathogen systems.</p>
+<p class="l">Before that: comparative genomics and genome annotation at BRIC–NIAB, Hyderabad, and homology modeling at ICMR–RMRIMS, Patna. Python, R and Linux pipelines, with a strong interest in AI-driven biological data analysis. Seeking PhD and research opportunities in computational biology.</p></section>
+
+<section class="col" id="experience"><h2>Experience</h2>
+<div class="job" style="--c:var(--T)"><div class="w">Aug 2026 – Present</div><h3>Project Associate-I</h3><div class="o">THSTI, Faridabad</div><div class="pi">PI: Dr. Amit Kumar Yadav, Principal Scientist-II</div>
+<ul><li>DIA-based proteomics with DIA-NN: identification and quantification</li><li>LC-MS/MS processing and protein-level downstream analysis</li><li>Phosphorylation PTM site prediction and motif analysis</li><li>Tools: DIA-NN, FragPipe, Python, R, Linux</li></ul></div>
+<div class="job" style="--c:var(--A)"><div class="w">Dec 2025 – May 2026</div><h3>Dissertation Research Intern, Bioinformatics</h3><div class="o">NIAB, Hyderabad</div><div class="pi">Supervisor: Dr. Shailesh Sharma, Scientist-E</div>
+<ul><li>Genome annotation and comparative genomics of indigenous livestock</li><li>GTF/GFF generation; RNA-Seq and transcriptomics processing</li><li>Tools: BLAST, HISAT2, StringTie, SAMtools, AGAT, Minimap2</li></ul></div>
+<div class="job" style="--c:var(--G)"><div class="w">Jul – Aug 2025</div><h3>Summer Intern</h3><div class="o">ICMR–RMRIMS, Patna</div><div class="pi">Supervisor: Dr. Manas Ranjan Dikhit, Scientist-C</div>
+<ul><li>Homology modeling and active-site prediction of Amastin from <i>Leishmania donovani</i></li></ul></div></section>
+
+<section class="col" id="skills"><h2>Skills</h2>
+<div class="sk" style="--c:var(--T)"><b>proteomics</b><span>DIA-NN · FragPipe · LC-MS/MS · PTM / Phosphorylation · Motif Analysis</span></div>
+<div class="sk" style="--c:var(--A)"><b>genomics</b><span>RNA-Seq · Genome Annotation · Comparative Genomics · Sequence Analysis · BLAST</span></div>
+<div class="sk" style="--c:var(--C)"><b>ngs tools</b><span>FastQC · Fastp · HISAT2 · StringTie · SAMtools · AGAT · Minimap2</span></div>
+<div class="sk" style="--c:var(--G)"><b>structural</b><span>Homology Modeling · SWISS-MODEL · PyMOL · Active Site Prediction · Docking (basic)</span></div>
+<div class="sk" style="--c:var(--A)"><b>code &amp; linux</b><span>Python (basic) · R (basic) · Ubuntu / Shell · Git &amp; GitHub</span></div>
+<div class="sk" style="--c:var(--T)"><b>web &amp; db</b><span>HTML · JavaScript · SQL · Apache · MariaDB · LAMP</span></div></section>
+
+<section class="col" id="projects"><h2>Projects</h2>
+<div class="pr" style="--c:var(--T)"><h3>Phosphoproteomics &amp; PTM Analysis</h3><p>DIA-NN quantification of LC-MS/MS data with phosphorylation site prediction and motif analysis.</p><small>THSTI · DIA-NN · FragPipe · Python</small></div>
+<div class="pr" style="--c:var(--A)"><h3>Multi-Species Genome Annotation &amp; RNA-Seq Workflow</h3><p>Reproducible pipeline for QC, reference preparation, annotation and downstream analysis.</p><small>NIAB · Python · RNA-Seq</small></div>
+<div class="pr" style="--c:var(--A)"><h3>Y-Chromosome Scaffolds in Buffalo Genomes</h3><p>Mapped Bangladesh and Jafarabadi scaffolds to the swamp buffalo Y chromosome to find male-specific scaffolds.</p><small>NIAB · Minimap2 · Comparative Genomics</small></div>
+<div class="pr" style="--c:var(--G)"><h3>Homology Modeling of Amastin</h3><p>Tertiary structure and ligand-binding site prediction in <i>Leishmania donovani</i>.</p><small>ICMR–RMRIMS · SWISS-MODEL · PyMOL</small></div></section>
+
+<section class="col" id="education"><h2>Education &amp; Achievements</h2><div class="ed">
+<div><b>M.Sc. Biotechnology, Patna Women's College, Patna University</b><small>2024 – 2026 · CGPA 7.69/10 · Grade A+</small></div>
+<div><b>B.Sc. (Hons.) Microbiology, Kazi Nazrul University</b><small>2020 – 2024 · CGPA 7.81/10</small></div>
+<div><b>RNA Biology, Elite Certification</b><small>NPTEL (SWAYAM), IIT Madras · 87% · Apr 2026</small></div>
+<div><b>Data Analysis using Python, Workshop</b><small>Patna Women's College · Dec 2025</small></div>
+<div><b>International Conference Paper Presentation</b><small>"Transcriptome Profiling Reveals lncRNA-Mediated Regulation of Host Immune Responses During Viral Infection" · Jan 2026</small></div></div></section>
+
+<section class="col" id="contact"><h2>Contact</h2>
+<p class="l">Open to research collaborations, PhD opportunities and roles in bioinformatics and computational genomics.</p>
+<a class="mail" href="mailto:anishabioinformatics@gmail.com">anishabioinformatics@gmail.com</a><br/>
+<div class="links"><a class="btn" href="https://www.linkedin.com/in/anisha-v-bioinfo" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/bioinfiobyanisha" target="_blank" rel="noopener">GitHub</a></div></section>
+</main>
+<footer>chr1:1–248,956,422 | assembly: career_v1 | build: 2026 · © Anisha Vishwakarma</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* name decodes from random A/T/G/C */
+(function(){const h=document.getElementById('nm'),full=h.dataset.t,L='ATGC';if(RM)return;let f=0;
+ const iv=setInterval(()=>{f++;h.textContent=[...full].map((c,i)=>c===' '||c==='\n'?c:(i<f/1.4?c:L[Math.random()*4|0])).join('');if(f>full.length*1.4+3){h.textContent=full;clearInterval(iv)}},38)})();
+/* glow follows cursor */
+const glow=document.getElementById('glow');
+addEventListener('mousemove',e=>glow.style.transform=`translate(${e.clientX}px,${e.clientY}px)`);
+/* DNA -> RNA -> protein particle morph */
+(function(){
+ if(!window.THREE)return;
+ const N=3000,cv=document.getElementById('bg'),ren=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+ ren.setPixelRatio(Math.min(devicePixelRatio,2));
+ const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(50,1,.1,100);cam.position.z=17;
+ const g=new THREE.Group();sc.add(g);
+ const pal=[new THREE.Color('#2EE6D0'),new THREE.Color('#FF7A59'),new THREE.Color('#6C96FF'),new THREE.Color('#F5C04A')];
+ const S=[0,1,2].map(()=>new Float32Array(N*3)),C=[0,1,2].map(()=>new Float32Array(N*3)),sw=new Float32Array(N*3),off=new Float32Array(N*3);
+ const r=()=>Math.random()-.5,put=(k,i,p,c)=>{S[k][i*3]=p[0];S[k][i*3+1]=p[1];S[k][i*3+2]=p[2];C[k][i*3]=c.r;C[k][i*3+1]=c.g;C[k][i*3+2]=c.b};
+ const tmp=new THREE.Color();
+ for(let i=0;i<N;i++){
+  const u=i/N;let j=.14;
+  if(i%10<8){const s=i%2,a=u*44+s*Math.PI;put(0,i,[2*Math.cos(a)+r()*j,(u-.5)*15,2*Math.sin(a)+r()*j],pal[s])}
+  else{const lv=Math.floor(u*44)/44,a=lv*44,t=r()*2;put(0,i,[2*t*Math.cos(a),(lv-.5)*15,2*t*Math.sin(a)],pal[t>0?2:3])}
+  put(1,i,[2.6*Math.sin(u*16)+r()*.5,(u-.5)*14,1.9*Math.cos(u*11+1)+r()*.5],pal[(i*7)%5<2?1:(i*7)%4]);
+  const t=u*Math.PI*2;tmp.setHSL(.66*(1-u),.85,.6);
+  put(2,i,[(Math.sin(t)+2*Math.sin(2*t))*1.5+r()*.5,(Math.cos(t)-2*Math.cos(2*t))*1.5+r()*.5,-Math.sin(3*t)*2.2+r()*.5],tmp);
+  sw[i*3]=r()*5;sw[i*3+1]=r()*5;sw[i*3+2]=r()*5;
+ }
+ const pos=new Float32Array(N*3),col=new Float32Array(N*3),geo=new THREE.BufferGeometry();
+ geo.setAttribute('position',new THREE.BufferAttribute(pos,3));geo.setAttribute('color',new THREE.BufferAttribute(col,3));
+ const cn=document.createElement('canvas');cn.width=cn.height=64;const cx=cn.getContext('2d'),gr=cx.createRadialGradient(32,32,0,32,32,32);
+ gr.addColorStop(0,'#fff');gr.addColorStop(.4,'rgba(255,255,255,.5)');gr.addColorStop(1,'rgba(255,255,255,0)');cx.fillStyle=gr;cx.fillRect(0,0,64,64);
+ const pts=new THREE.Points(geo,new THREE.PointsMaterial({size:.17,map:new THREE.CanvasTexture(cn),vertexColors:true,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));
+ g.add(pts);g.rotation.z=.25;
+ let mx=0,my=0,prog=0,burst=0,base=1,hud=[...document.querySelectorAll('#hud span')];
+ addEventListener('mousemove',e=>{mx=e.clientX/innerWidth*2-1;my=-(e.clientY/innerHeight)*2+1});
+ addEventListener('click',()=>burst=1);
+ addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;prog=m>0?scrollY/m:0},{passive:true});
+ function fit(){const w=innerWidth,h=innerHeight;ren.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();g.position.x=w>800?5.4:0;base=w>800?1:.7}
+ addEventListener('resize',fit);fit();
+ const ray=new THREE.Vector3(),m3=new THREE.Vector3();let stage=-1;
+ function tick(t){
+  const s=Math.min(1.999,prog*2),a=Math.floor(s),f0=s-a,f=f0*f0*(3-2*f0),sf=Math.sin(f*Math.PI)*1.6;
+  ray.set(mx,my,.5).unproject(cam).sub(cam.position).normalize();m3.copy(cam.position).addScaledVector(ray,-cam.position.z/ray.z);g.worldToLocal(m3);
+  for(let i=0;i<N;i++){const k=i*3;
+   for(let d=0;d<3;d++){const q=k+d;pos[q]=S[a][q]*(1-f)+S[a+1][q]*f+sw[q]*sf+off[q];col[q]=C[a][q]*(1-f)+C[a+1][q]*f}
+   const dx=pos[k]-m3.x,dy=pos[k+1]-m3.y,dz=pos[k+2]-m3.z,d2=dx*dx+dy*dy+dz*dz;
+   if(d2<3.5){const fo=(1-d2/3.5)*.18/Math.sqrt(d2+.05);off[k]+=dx*fo;off[k+1]+=dy*fo;off[k+2]+=dz*fo}
+   off[k]*=.93;off[k+1]*=.93;off[k+2]*=.93}
+  geo.attributes.position.needsUpdate=geo.attributes.color.needsUpdate=true;
+  if(!RM)g.rotation.y=t*.00022+prog*3;
+  burst*=.92;g.scale.setScalar(base*(1+burst*.28));
+  cam.position.x+=(mx*1.4-cam.position.x)*.04;cam.position.y+=(my*1-cam.position.y)*.04;cam.lookAt(0,0,0);
+  const st=Math.round(s);if(st!==stage){stage=st;hud.forEach((e,i)=>e.classList.toggle('on',i===st))}
+  ren.render(sc,cam);requestAnimationFrame(tick)}
+ requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
